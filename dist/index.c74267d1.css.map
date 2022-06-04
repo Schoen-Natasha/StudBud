@@ -1,0 +1,1 @@
+{"mappings":"AAEA","sources":["public/scss/main.scss"],"sourcesContent":["@import \"navigation\";\r\n\r\nbody {\r\n    color: red;\r\n}"],"names":[],"version":3,"file":"index.c74267d1.css.map","sourceRoot":"/__parcel_source_root/"}
