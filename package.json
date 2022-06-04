@@ -1,0 +1,19 @@
+{
+  "name": "studbud",
+  "version": "1.0.0",
+  "description": "Web application for students ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schoen-Natasha/StudBud.git"
+  },
+  "author": "Natasha Brand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schoen-Natasha/StudBud/issues"
+  },
+  "homepage": "https://github.com/Schoen-Natasha/StudBud#readme"
+}
