@@ -179,3 +179,5 @@ function renderTask(task) {
 
   form.reset();
 }
+
+
