@@ -364,10 +364,7 @@ body {
     padding: 1rem 2rem;
     border-radius: 20px;
   }
-  
-  .searchFunctionContainer {
-    
-  }
+
   
   .synonymsContainer {
     width: 100%;
@@ -443,7 +440,7 @@ body {
   .playlistCover:hover > h3 {
     animation-name: textRise;
     animation-duration: 0.2s;
-    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     animation-play-state: revert;
   }
   

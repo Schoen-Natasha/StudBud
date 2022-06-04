@@ -397,7 +397,7 @@ button img {
 .playlistCover:hover > h3 {
   animation-name: textRise;
   animation-duration: .2s;
-  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   animation-play-state: revert;
 }
 

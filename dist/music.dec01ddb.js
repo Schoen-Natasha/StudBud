@@ -10,4 +10,4 @@ sidebarMenuButton.addEventListener("click", ()=>{
     sidebar.classList.add("toggleOn");
 });
 
-//# sourceMappingURL=index.dec01ddb.js.map
+//# sourceMappingURL=music.dec01ddb.js.map
