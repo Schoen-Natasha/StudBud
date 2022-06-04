@@ -1,5 +1,345 @@
 @import "navigation";
 
-body {
-    color: red;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0
 }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px; 
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    }
+  
+  .navbar a {
+    padding: 10px;
+    margin: 0 5px;
+    transition: font-size 0.3s, color 0.2s;
+  }
+  
+  .navbar a:hover {
+    color: #ff4599;
+    font-size: 1.15em;
+  }
+  
+  ul.nav > li:last-child {
+    background-color: #ff4599;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  
+  .createTask > button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    background: transparent;
+    color:white;
+  }
+
+  /* TOP NAV BAR */
+.navBarLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  
+  header > .navBarLeft > img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  i	{
+    margin: 2rem;
+  }
+  
+  i:hover {
+    color: #383838;
+    cursor: pointer;
+  }
+  
+  header > .navBarLeft > button {
+    background: none;
+    border: none;
+    margin: none;
+    padding: none;
+  }
+  
+  .createTask {
+    margin: 2rem;
+  }
+  
+  .createTask {
+    transition: font-size 0.3s, color 0.2s;
+    background-color: #ff4599;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+  }
+  
+  .createTask:hover {
+    background-color: #ee3a8b;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+
+  /* SIDEBAR */
+
+.mainContentContainer {
+    display: flex; 
+  }
+  
+  .sidebar {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    padding-top: 2em;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  
+  .sidebar > a > img {
+    margin: 0.5rem;
+    width: 80px;
+    height: 80px;
+    
+  }
+  
+  
+  .sidebar > a > img:hover {
+    background: #f2f2f2;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+  
+  
+  /* Kanban Board */
+  
+  .kanbanBoardWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+  }
+  
+  .taskColumn {
+    display: flex; 
+    flex-direction: column;
+    flex-flow: column wrap;
+    align-content: center;
+    
+  }
+  
+  .taskColumn > div {
+    padding: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  
+  .statusHolder {
+    display: inline-block;
+  }
+  
+  a.button {
+    background: #6868df;
+    padding: 0.3em 1em;
+    border-radius: 1em;
+    font-size: 0.8em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .kanbanBoardWrapper > div:nth-child(odd) {
+    background: #f5f5f5;
+  }
+  
+  
+  .taskBox {
+    background: #ffffff;
+    padding: 1rem;
+    border: 3px solid #9f91e3;
+    border-radius: 1.5em;
+    width: 24rem;
+    display: inline-block;
+    margin-bottom: 1.5em;
+    cursor: move;
+  }
+  
+  
+  .taskBox > p.assignmentID {
+    font-size: 1em;
+    color: #aaaaf3;
+    font-weight: 600;
+    
+  }
+  
+  .taskBox > h1 {
+    font-size: 1.5em;
+  }
+  
+  .taskBox > p.taskDescription {
+    color: #4a4a4a;
+    padding: 4px 0 4px 0;
+  }
+  
+  .taskBox > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .taskBox.dragging {
+    opacity: 0.6;
+  }
+  
+  .dueDate {
+    color: grey;
+    list-style-type: none;
+  }
+  
+  .unitCode {
+    background: #aaaaf3;
+    padding: 0.3em 1em;
+    border-radius: 2em;
+    color: white;
+    font-size: 0.8em
+  }
+
+  /* Create Task Popup */
+.modal {
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%, -50%) scale(0);
+    width: 300px;
+    height: 350px;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .modal > form > h1 {
+    font-size: 1.5em;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  
+  .modal > form >  button:nth-last-of-type(-n+2):hover {
+    background-color: #dedede;
+    cursor: pointer;
+  }
+  
+  form input {
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    margin: 0.3rem;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    
+  }
+  
+  ::placeholder {
+    color: #bfbfbf;
+  }
+  
+    /* make background blurry */
+  #overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px) brightness(80%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  button img {
+    width: 2.2em;
+    height: 2em;
+    padding: 0.4rem;
+  }
+  
+  
+  .closeButton {
+    background: none;
+    border: none;
+  }
+  
+  .closeButton:hover {
+    cursor: pointer;
+    color: #ededed;
+    border-radius: 50%;
+  }
+  
