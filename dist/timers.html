@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="/index.c74267d1.css" rel="stylesheet" type="text/css">
+  <link href="/index.c74267d1.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a9d770cd41.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/x-icon" href="/studbud%20logo%20favicon.7b5aaee8.svg">
+  
 </head>
 
 <body class="preload">
@@ -24,44 +25,60 @@
   </header>
       
   
-  <div class="mainContentContainer">
+  <div class="mainContentContainer timers">
 
     
     <!-- SIDEBAR CODE -->
     <div class="sidebarContainer" id="sidebarDisplay">
       <aside class="sidebar"> 
 
-        
         <a href="/index.html"><img class="" src="/kanban%20board.2e84354d.svg"></a>
-        
         <a href="/timers.html"><img class="stopwatchIcon" src="/timer%20icon.b5706e56.svg" alt="stopwatch icon"></a>
-        
         <a href="/dictionary.html"><img class="" src="/dictionary%20icon.5823ff2a.svg"></a>
-        
         <a href="/music.html"><img class="musicIcon" src="/music%20icon.edf457c3.svg"></a>
-        
       </aside>
     </div>
 
 
-    <!-- Dictionary Code -->
-    <div class="dictionaryContainer">
-      <h1>Dictionary</h1>
+    <!-- Stopwatch Code --> 
     
-        <p class="searchFunctionContainer">
-          <input id="searchedWord" placeholder="Search for a word">
-          <button id="submitButton">Search</button>
-        </p>
-  
-        <div id="definitionsContainer">
-        
+    <div class="wrapper">
+      <h1>Timers.</h1>
+      <div class="timerContainer">
+        <h2>Pomodoro</h2>
+        <div class="timerDisplay pomodoro">
+          <img src="/tomato.c4efe89d.svg">
+          <p id="pomodoro">00:25:00</p>
+          <div class="controlsContainer">
+            <button id="pomodoroStart">Start</button>
+            <button id="stopPom">Stop</button>
+            <button id="pomodoroReset">Reset</button>
+          </div>
         </div>
       </div>
+
+      <div class="timerContainer">
+        <h2>Stopwatch</h2>
+        <div class="timerDisplay stopwatch">
+          <img src="/stopwatch.a4980d21.svg">
+          <p id="stopwatch">00:00:00</p>
+          <div class="controlsContainer">
+            <button id="swStart">Start</button>
+            <button id="stopSw">Stop</button>
+            <button id="swReset">Reset</button>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+      
   </div>
 
  
     
-  <script src="/index.f3bd186e.js"></script>
+  
   
 </body>
 

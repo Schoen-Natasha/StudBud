@@ -347,4 +347,215 @@ button img {
   padding: .05rem .7rem;
 }
 
+.playlistRowContainer {
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  display: flex;
+  overflow: auto;
+}
+
+.playlistRow {
+  width: 100%;
+  grid-auto-flow: column;
+  justify-content: start;
+  display: grid;
+  overflow-x: auto;
+}
+
+.playlistRowContainer h2 {
+  color: #424242;
+  padding-top: 1.5rem;
+  padding-bottom: .4rem;
+  font-size: 1.1rem;
+}
+
+.playlistCover {
+  width: 18rem;
+  height: 11rem;
+  color: #fff;
+  border-radius: 1rem;
+  align-items: flex-end;
+  margin: 1rem;
+  padding: 1rem;
+  font-weight: 300;
+  transition: filter .2s;
+  display: flex;
+}
+
+.playlistCover:hover {
+  cursor: pointer;
+}
+
+.playlistCover > h3 {
+  padding-left: 0;
+  animation-name: textRiseReverse;
+  animation-duration: .2s;
+}
+
+.playlistCover:hover > h3 {
+  animation-name: textRise;
+  animation-duration: .2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-play-state: revert;
+}
+
+.playlistCover > h3 > img {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.playlistCover:hover > h3 > img {
+  opacity: 1;
+}
+
+.playlistCover.hogwarts {
+  background-image: url("https://images.unsplash.com/photo-1618944913480-b67ee16d7b77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+}
+
+.playlistCover.bardcore {
+  background-image: url("https://external-preview.redd.it/Z6wvktf259wvoR_fUTN6KEk-NNlbf7GDncWH86sqnac.jpg?auto=webp&s=af7c135d328929d09bd02c765a4e934dcdbdc913");
+  background-size: cover;
+}
+
+.playlistCover.studioGhibli {
+  background-image: url("https://mymodernmet.com/wp/wp-content/uploads/2021/01/studio-ghibli-history-7.jpg");
+  background-size: cover;
+}
+
+.playlistCover.witcher {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/985/837/295/the-witcher-the-witcher-3-wild-hunt-kaer-morhen-geralt-of-rivia-hd-wallpaper-preview.jpg");
+  background-size: cover;
+}
+
+.playlistCover.rain {
+  background-image: url("https://images.unsplash.com/photo-1496034663057-6245f11be793?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+}
+
+.playlistCover.lofi {
+  background-image: url("https://i.ytimg.com/vi/tgI6PjEq0O8/maxresdefault.jpg");
+  background-size: cover;
+}
+
+.playlistCover.fireplace {
+  background-image: url("https://images.unsplash.com/photo-1538250934773-edd3e8e185c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+}
+
+@keyframes textRise {
+  from {
+    padding-bottom: 0;
+  }
+
+  to {
+    padding-bottom: 10px;
+  }
+}
+
+@keyframes textRiseReverse {
+  from {
+    padding-bottom: 10px;
+  }
+
+  to {
+    padding-bottom: 0;
+  }
+}
+
+.musicController {
+  width: 30px;
+  height: 30px;
+}
+
+h3 {
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  margin: auto;
+}
+
+.wrapper h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.timerContainer {
+  border-radius: 3rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 4rem;
+  display: flex;
+  box-shadow: 0 2px 5px #cfcfcf;
+}
+
+.timerContainer.pomodoro, .timerContainer.stopwatch {
+  outline: 5px solid #f8e4e4;
+}
+
+.timerContainer h2 {
+  text-align: center;
+}
+
+.timerDisplay {
+  background-color: #f5f5f5;
+  border-radius: 2rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  display: flex;
+}
+
+.timerDisplay p {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.timerDisplay.pomodoro p {
+  color: #f36666;
+}
+
+.timerDisplay.stopwatch p {
+  color: #4865c4;
+}
+
+.controlsContainer {
+  flex-direction: row;
+  display: flex;
+}
+
+.controlsContainer button {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 3rem;
+  margin: 1rem;
+  padding: .3rem .7rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+}
+
+.pomodoro > .controlsContainer button {
+  color: #f36666;
+}
+
+.stopwatch > .controlsContainer button {
+  color: #4865c4;
+}
+
+.sidebarContainer.toggleOn {
+  display: inline;
+}
+
+@media screen and (max-width: 799px) {
+  .sidebarContainer {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
