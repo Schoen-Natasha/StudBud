@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Schoen-Natasha/StudBud/issues"
   },
-  "homepage": "https://github.com/Schoen-Natasha/StudBud#readme"
+  "homepage": "https://github.com/Schoen-Natasha/StudBud#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
