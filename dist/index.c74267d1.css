@@ -313,4 +313,38 @@ button img {
   border-radius: 50%;
 }
 
+.dictionaryContainer {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.dictionaryContainer h1 {
+  margin: 1rem;
+}
+
+#definitionsContainer {
+  width: 25rem;
+  height: auto;
+  background: #eef2fa;
+  border-radius: 20px;
+  margin: 3rem;
+  padding: 1rem 2rem;
+}
+
+.synonymsContainer {
+  width: 100%;
+  flex-flow: wrap;
+  place-content: space-around space-evenly;
+  display: flex;
+}
+
+.synonymsContainer > p {
+  background: #fff;
+  border-radius: 1rem;
+  margin: .2rem;
+  padding: .05rem .7rem;
+}
+
 /*# sourceMappingURL=index.c74267d1.css.map */
